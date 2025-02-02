@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+#name {
+    font-size: 32px;
+    margin: 0;
+}
+
+.resume-container {
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#personal-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+#contact li, a {
+    display: flex;
+    gap: 2.5rem;
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+}
+h1, h2 {
+    border-bottom: 2px solid #333;
+}
+h3, p{
+    margin: 0;
+}
+@media (max-width: 600px) {
+    .resume-container {
+        padding: 15px;
+    }
+}

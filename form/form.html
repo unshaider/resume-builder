@@ -1,0 +1,211 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume Builder</title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="../resume/resume.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <form id="resume-form">
+                <h2>Personal Information</h2>
+                <input type="text" id="name-input" placeholder="Full Name" required>
+                <input type="email" id="email-input" placeholder="Email" required>
+                <input type="tel" id="phone-input" placeholder="Phone Number">
+                <textarea id="Summary" placeholder="Summary" required></textarea>
+                <input type="url" id="linkedin-input" placeholder="LinkedIn Profile">
+                <input type="url" id="github-input" placeholder="GitHub Profile">
+
+                <h2>Education</h2>
+                <input type="text" id="degree-input" placeholder="Degree" required>
+                <input type="text" id="university-input" placeholder="University" required>
+                <input type="text" id="grad-year-input" placeholder="Graduation Year" required>
+
+                <h2>Skills</h2>
+                <textarea id="skills-input" placeholder="Enter skills (comma-separated)" required></textarea>
+
+                <h2>Work Experience</h2>
+                <input type="text" id="job-title-input" placeholder="Job Title" required>
+                <input type="text" id="company-input" placeholder="Company" required>
+                <input type="text" id="experience" placeholder="Experience in years/months" required>
+
+                <button type="submit" class="btn">Generate Resume</button>
+            </form>
+        </div>
+
+        <div id="generated-resume" class="resume-container"></div>
+    </div>
+    <script src="editable-resume.js"></script>
+    <script src="form.js"></script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume Builder</title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="../resume/resume.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <form id="resume-form">
+                <h2>Personal Information</h2>
+                <div class="form-group">
+                    <label for="name-input">Full Name</label>
+                    <input 
+                        type="text" 
+                        id="name-input" 
+                        name="name" 
+                        placeholder="John Doe" 
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email-input">Email</label>
+                    <input 
+                        type="email" 
+                        id="email-input" 
+                        name="email" 
+                        placeholder="john.doe@example.com" 
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="phone-input">Phone Number</label>
+                    <input 
+                        type="tel" 
+                        id="phone-input" 
+                        name="phone" 
+                        placeholder="+1 (123) 456-7890"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="summary">Professional Summary</label>
+                    <textarea 
+                        id="summary" 
+                        name="summary" 
+                        placeholder="Brief professional overview" 
+                        required
+                    ></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="linkedin-input">LinkedIn Profile</label>
+                    <input 
+                        type="url" 
+                        id="linkedin-input" 
+                        name="linkedin" 
+                        placeholder="https://linkedin.com/in/username"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="github-input">GitHub Profile</label>
+                    <input 
+                        type="url" 
+                        id="github-input" 
+                        name="github" 
+                        placeholder="https://github.com/username"
+                    >
+                </div>
+
+                <h2>Education</h2>
+                <div class="form-group">
+                    <label for="degree-input">Degree</label>
+                    <input 
+                        type="text" 
+                        id="degree-input" 
+                        name="degree" 
+                        placeholder="Bachelor of Science in Computer Science" 
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="university-input">University</label>
+                    <input 
+                        type="text" 
+                        id="university-input" 
+                        name="university" 
+                        placeholder="Stanford University" 
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="grad-year-input">Graduation Year</label>
+                    <input 
+                        type="number" 
+                        id="grad-year-input" 
+                        name="graduation_year" 
+                        placeholder="2023" 
+                        required
+                    >
+                </div>
+
+                <h2>Skills</h2>
+                <div class="form-group">
+                    <label for="skills-input">Professional Skills</label>
+                    <textarea 
+                        id="skills-input" 
+                        name="skills" 
+                        placeholder="Python, JavaScript, React, Machine Learning" 
+                        required
+                    ></textarea>
+                </div>
+
+                <h2>Work Experience</h2>
+                <div class="form-group">
+                    <label for="job-title-input">Job Title</label>
+                    <input 
+                        type="text" 
+                        id="job-title-input" 
+                        name="job_title" 
+                        placeholder="Software Engineer" 
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="company-input">Company</label>
+                    <input 
+                        type="text" 
+                        id="company-input" 
+                        name="company" 
+                        placeholder="Tech Innovations Inc." 
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="experience">Experience Duration</label>
+                    <input 
+                        type="text" 
+                        id="experience" 
+                        name="experience" 
+                        placeholder="2 years" 
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="btn">Generate Resume</button>
+            </form>
+        </div>
+        
+        <div id="generated-resume" class="resume-container"></div>
+    </div>
+
+    <script src="form-validation.js"></script>
+</body>
+</html>
